@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,148 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DungeonDice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dungeon Dice!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJn-gF-QSI">
+                                <rect key="frame" x="16" y="64" width="343" height="121.66666666666669"/>
+                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="36"/>
+                                <color key="textColor" red="0.72941176470000002" green="0.054901960780000002" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FtI-eI-wUa">
+                                <rect key="frame" x="16" y="369.66666666666669" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="CZE-AJ-KzF"/>
+                                    <constraint firstAttribute="height" constant="30" id="cic-wU-nXD"/>
+                                </constraints>
+                                <state key="normal" title="4-Sided"/>
+                                <connections>
+                                    <action selector="rollPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jha-HS-a8n"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QPR-HL-aJp">
+                                <rect key="frame" x="157.66666666666666" y="369.66666666666669" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="M9e-zb-nd6"/>
+                                    <constraint firstAttribute="width" constant="60" id="ic4-5E-DGA"/>
+                                </constraints>
+                                <state key="normal" title="6-Sided"/>
+                                <connections>
+                                    <action selector="rollPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RrI-nq-Mad"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wCM-mh-wX9">
+                                <rect key="frame" x="299" y="367.66666666666669" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="1XI-RT-4dA"/>
+                                    <constraint firstAttribute="height" constant="30" id="yna-6t-PEb"/>
+                                </constraints>
+                                <state key="normal" title="8-Sided"/>
+                                <connections>
+                                    <action selector="rollPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ulv-wO-Zm1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="che-fl-7bV">
+                                <rect key="frame" x="16" y="434.66666666666669" width="62" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="62" id="dP9-9v-Gcf"/>
+                                    <constraint firstAttribute="height" constant="30" id="gB6-6z-Y5N"/>
+                                </constraints>
+                                <state key="normal" title="10-Sided"/>
+                                <connections>
+                                    <action selector="rollPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mRo-FC-Snd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ivs-Pb-kad">
+                                <rect key="frame" x="156.66666666666666" y="434.66666666666669" width="62" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="62" id="XOI-Cv-4DI"/>
+                                    <constraint firstAttribute="height" constant="30" id="mu4-30-AXL"/>
+                                </constraints>
+                                <state key="normal" title="12-Sided"/>
+                                <connections>
+                                    <action selector="rollPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZxI-tu-BjL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5gz-nF-3hW">
+                                <rect key="frame" x="295" y="432.66666666666669" width="64" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="I3E-Yc-cAH"/>
+                                    <constraint firstAttribute="height" constant="30" id="z0K-HK-heo"/>
+                                </constraints>
+                                <state key="normal" title="20-Sided"/>
+                                <connections>
+                                    <action selector="rollPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zZC-N0-1fd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UPV-ze-lxM">
+                                <rect key="frame" x="151.66666666666666" y="499.66666666666674" width="72" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="72" id="0J7-QH-5yD"/>
+                                    <constraint firstAttribute="height" constant="30" id="OE5-Qb-lZK"/>
+                                </constraints>
+                                <state key="normal" title="100-Sided"/>
+                                <connections>
+                                    <action selector="rollPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eSy-Ux-hOF"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WlD-NV-u9M">
+                                <rect key="frame" x="16" y="209.66666666666666" width="343" height="59.999999999999972"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="xVm-Dp-bO4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="14"/>
+                                <color key="textColor" red="0.72941176470000002" green="0.054901960780000002" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Dice to Roll" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vyy-9j-NtO">
+                                <rect key="frame" x="16" y="275.66666666666669" width="343" height="69"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="69" id="W04-cW-nIt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="10"/>
+                                <color key="textColor" red="0.72941176470000002" green="0.054901960780000002" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="UPV-ze-lxM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5pF-gf-2Pd"/>
+                            <constraint firstItem="wCM-mh-wX9" firstAttribute="top" secondItem="WlD-NV-u9M" secondAttribute="bottom" constant="98" id="64A-2o-a9B"/>
+                            <constraint firstItem="hJn-gF-QSI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="7Lt-Sb-hDo"/>
+                            <constraint firstItem="UPV-ze-lxM" firstAttribute="top" secondItem="Ivs-Pb-kad" secondAttribute="bottom" constant="35" id="8jg-x1-lZh"/>
+                            <constraint firstItem="QPR-HL-aJp" firstAttribute="top" secondItem="WlD-NV-u9M" secondAttribute="bottom" constant="100" id="C3p-uo-PQV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5gz-nF-3hW" secondAttribute="trailing" constant="16" id="E30-SO-nVO"/>
+                            <constraint firstItem="hJn-gF-QSI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="EnS-q9-5qc"/>
+                            <constraint firstItem="QPR-HL-aJp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="H8b-HJ-KEB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wCM-mh-wX9" secondAttribute="trailing" constant="16" id="HqT-N1-FY9"/>
+                            <constraint firstItem="Vyy-9j-NtO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Ht1-bI-8Cq"/>
+                            <constraint firstItem="che-fl-7bV" firstAttribute="top" secondItem="FtI-eI-wUa" secondAttribute="bottom" constant="35" id="IY3-ag-a00"/>
+                            <constraint firstItem="5gz-nF-3hW" firstAttribute="top" secondItem="wCM-mh-wX9" secondAttribute="bottom" constant="35" id="LkQ-W1-gi2"/>
+                            <constraint firstItem="che-fl-7bV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="N3i-y6-zV9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vyy-9j-NtO" secondAttribute="trailing" constant="16" id="OZF-aY-4Ry"/>
+                            <constraint firstItem="WlD-NV-u9M" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="R4L-1B-0F2"/>
+                            <constraint firstItem="Ivs-Pb-kad" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SSH-Ll-cDQ"/>
+                            <constraint firstItem="Vyy-9j-NtO" firstAttribute="top" secondItem="WlD-NV-u9M" secondAttribute="bottom" constant="6" id="Sx7-z1-CrB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hJn-gF-QSI" secondAttribute="trailing" constant="16" id="XvT-li-8wu"/>
+                            <constraint firstItem="WlD-NV-u9M" firstAttribute="top" secondItem="hJn-gF-QSI" secondAttribute="bottom" constant="24" id="cat-VQ-7h3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WlD-NV-u9M" secondAttribute="trailing" constant="16" id="oAv-Zg-YHI"/>
+                            <constraint firstItem="FtI-eI-wUa" firstAttribute="top" secondItem="WlD-NV-u9M" secondAttribute="bottom" constant="100" id="p1E-cM-yic"/>
+                            <constraint firstItem="FtI-eI-wUa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="u34-0u-gF1"/>
+                            <constraint firstItem="Ivs-Pb-kad" firstAttribute="top" secondItem="QPR-HL-aJp" secondAttribute="bottom" constant="35" id="zn0-ic-3yJ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="rolledMessage" destination="WlD-NV-u9M" id="mrU-yp-qsd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="80.799999999999997" y="132.26600985221674"/>
         </scene>
     </scenes>
 </document>
